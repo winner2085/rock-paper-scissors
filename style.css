@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(139, 223, 146);
+}
+
+.everything {
+   display: flex;
+    justify-content: center;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
