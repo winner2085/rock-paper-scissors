@@ -18,9 +18,23 @@ let outputList = ['<img src="https://nationaltoday.com/wp-content/uploads/2021/0
 let inputIndex = 0;
 
 let inputFunction = () =>{
-    if(input.value === inputList[inputIndex]){
-        
-    }
+    playButton.addEventListener('click', () =>{
+        for (let i = 0; i < inputList.length; i++){
+            if(input.value === inputList[i]){
+                document.getElementById('image-container').innerHTML = outputList[i];
+            }
+        }
+        for (let i = 1; i < inputList.length; i++){
+            if(input.value === inputList[i]){
+                document.getElementById('image-container').innerHTML = outputList[i];
+            }
+        }
+        for (let i = 2; i < inputList.length; i++){
+            if(input.value === inputList[i]){
+                document.getElementById('image-container').innerHTML = outputList[i];
+            }
+        }
+    });
 }
 
 /* math.random possibly
