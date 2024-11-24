@@ -1,14 +1,14 @@
-const playButton = document.querySelector('.submit');
+const playButton = document.querySelector('.play');
 const playerScore = document.querySelector('.score-player');
 const compScore = document.querySelector('.score-comp');
 const input = document.getElementById('input-container');
 
-global.scorePlayer=0;
-global.scoreComp=0;
+let scorePlayer = 0;
+let scoreComp = 0;
 
 /* Draw score
-draw_text(50,50,"Player1 = "+string(global.score1))
-draw_text(50,150,"Player2 = "+string(global.score2)) */
+draw_text(50,50,"Player1 = "+string(scorePlayer))
+draw_text(50,150,"Player2 = "+string(scoreComp)) */
 
 let inputList = ['Rock', 'Paper', 'Scissors'];
 let outputList = ['<img src="https://nationaltoday.com/wp-content/uploads/2021/08/National-Pet-Rock-Day-1200x834.jpg" alt="picture of a rock with googly eyes"></img>',
@@ -17,7 +17,7 @@ let outputList = ['<img src="https://nationaltoday.com/wp-content/uploads/2021/0
 ]
 let inputIndex = 0;
 
-let inputFunction = () =>{
+let playFunction = () =>{
     playButton.addEventListener('click', () =>{
         for (let i = 0; i < inputList.length; i++){
             if(input.value === inputList[i]){
@@ -34,8 +34,15 @@ let inputFunction = () =>{
                 document.getElementById('image-container').innerHTML = outputList[i];
             }
         }
+    function displayImage() {
+        let num = Math.floor(Math.random());
+        document.getElementById(outputList[num]);
+    }        
     });
 }
 
+playFunction ();
+displayImage ();
+
 /* math.random possibly
-var randomValue = a[Math.floor(a.length * Math.random())]; */
+let randomValue = a[Math.floor(a.length * Math.random())]; */
