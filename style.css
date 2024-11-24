@@ -35,6 +35,11 @@ body {
     margin-right: 150px;
 }
 
+.image {
+    display: flex;
+    background-color: white;
+}
+
 .vs {
     display: flex;
     justify-content: center;

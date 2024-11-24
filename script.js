@@ -33,16 +33,12 @@ let playFunction = () =>{
             if(input.value === inputList[i]){
                 document.getElementById('image-container').innerHTML = outputList[i];
             }
-        }
-    function displayImage() {
-        let num = Math.floor(Math.random());
-        document.getElementById(outputList[num]);
-    }        
+        }     
     });
 }
 
 playFunction ();
-displayImage ();
+
 
 /* math.random possibly
-let randomValue = a[Math.floor(a.length * Math.random())]; */
+ */
