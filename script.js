@@ -37,8 +37,18 @@ let playFunction = () =>{
     });
 }
 
-playFunction ();
+function showImage() {
+    playButton.addEventListener('click', () =>{
+        document.getElementById('comp-img');
+        var a = Math.floor(Math.random() * outputList.length);
+        var img = outputList[a];
+        pic.style.backgroundImage = img;
+    });
+}
 
+
+playFunction ();
+showImage ();
 
 /* math.random possibly
  */
